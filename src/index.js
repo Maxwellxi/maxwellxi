@@ -1,4 +1,4 @@
-require('./styles.scss');
+require('./assets/styles/styles.scss');
 
 
 class Car {
