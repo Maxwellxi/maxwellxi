@@ -1,5 +1,5 @@
 {
-  "name": "tutor_webpack_2.0_from_scratch",
+  "name": "maxwellxi",
   "version": "1.0.0",
   "description": "my first webpack project",
   "main": "index.js",
@@ -30,6 +30,8 @@
     "postcss-loader": "^2.0.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.1.2",

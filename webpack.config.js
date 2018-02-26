@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // require webpack pl
 const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin'); // require webpack plugin
 
 let config = { // config object
-  entry: './src/index.js', // entry file
+  entry: './components/app/index.js', // entry file
   output: { // output
     path: path.resolve(__dirname, 'public'), // ouput path
     filename: 'output.js' // output filename
@@ -13,7 +13,7 @@ let config = { // config object
   resolve: { // These options change how modules are resolved
     extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gif', '.png'], // Automatically resolve certain extensions
     alias: { // Create aliases
-      images: path.resolve(__dirname, 'src/assets/images')  // src/assets/images alias
+      images: path.resolve(__dirname, 'components/src/assets/images')  // components/src/assets/images alias
     }
   },
   module: {
@@ -37,7 +37,7 @@ let config = { // config object
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: ['file-loader?context=src/assets/images/&name=images/[path][name].[ext]', {  // images loader
+        loaders: ['file-loader?context=components/src/assets/images/&name=images/[path][name].[ext]', {  // images loader
           loader: 'image-webpack-loader',
           query: {
             mozjpeg: {
