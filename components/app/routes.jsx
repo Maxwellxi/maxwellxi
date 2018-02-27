@@ -4,20 +4,32 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-
+ 
 import LayoutSite from '../layouts/default'
 import LayoutAmp from '../layouts/amp'
 
-
-export default class RoutesXi extends React.Component {
-  render() {
-    return (
-      <Router>
-          <Switch>
-            <Route exact path="/" component={LayoutSite} />
-            <Route exact path="/amp" component={LayoutAmp} />
-          </Switch>
-      </Router>
-    )
+const layoutRoutes = [
+  {
+    path:'/',
+    component: LayoutSite //main website
+  },
+  {
+    path:'/amp',
+    component: LayoutAmp, //amp website
   }
-}
+]
+
+const Routes  = () => (
+  <Router>
+      <Switch>
+        {layoutRoutes.map((route) =>
+          <Route 
+          exact 
+          path={route.path} 
+          component={route.component} />
+        )}
+      </Switch>
+  </Router>
+)
+
+export default Routes
